@@ -258,7 +258,7 @@
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycby1Wl0hnAFz4ZwW8hipqfCWdLXxCHVfJQhMcgjBoy1cjpURLobWxDh_3_wh65Xg7u3t/exec'
 
-const form = document.forms['contact-form']
+const form = document.forms['franch-form']
 
 form.addEventListener('submit', e => {
   e.preventDefault()
