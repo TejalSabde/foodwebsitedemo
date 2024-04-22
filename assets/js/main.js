@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
 
   /**
@@ -109,9 +109,42 @@
   }
 
   /**
+   * Scroll to Franchise form
+   */
+  let franchiseFloatingButton = document.getElementById('franchise-floating-button');//select('.franchise-floating-button')
+  let franchiseForm = document.getElementById('franchiseForm');//select('.franchise-form')
+
+  if (franchiseFloatingButton) {
+    // const togglefranchiseForm = () => {
+    //   if (window.scrollY > 100) {
+    //     franchiseFloatingButton.classList.add('active')
+    //   } else {
+    //     franchiseFloatingButton.classList.remove('active')
+    //   }
+    // }
+    // window.addEventListener('load', togglefranchiseForm)
+    // onscroll(franchiseForm, togglefranchiseForm)
+
+    franchiseFloatingButton.addEventListener('click', function () {
+      // Check if the click is inside the franchiseForm
+      if (franchiseForm.contains(franchiseFloatingButton)) {
+        // Hide the link
+        franchiseFloatingButton.style.display = 'none';
+      }
+    });
+
+    franchiseForm.addEventListener('scroll', function () {
+      // Show the link if it's hidden and the scroll is not at the top
+      if (franchiseForm.scrollTop > 0 && franchiseLink.style.display === 'none') {
+        franchiseFloatingButton.style.display = '';
+      }
+    });
+  }
+
+  /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -120,7 +153,7 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -130,7 +163,7 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -181,7 +214,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -202,9 +235,9 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -212,7 +245,7 @@
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
+        portfolioIsotope.on('arrangeComplete', function () {
           AOS.refresh()
         });
       }, true);
@@ -256,16 +289,16 @@
     });
   });
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxO8MC-yiRG5axZFjkvl7SkT0lLHM5alllMVcioDca5gUwBwtz-ePW2H_1R-iD3E0BO/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxO8MC-yiRG5axZFjkvl7SkT0lLHM5alllMVcioDca5gUwBwtz-ePW2H_1R-iD3E0BO/exec'
 
-const form = document.forms['franch-form']
+  const form = document.forms['franch-form']
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => alert("Thank you! your form is submitted successfully." ))
-  // .then(() => { window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
-})
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => alert("Thank you! your form is submitted successfully."))
+      // .then(() => { window.location.reload(); })
+      .catch(error => console.error('Error!', error.message))
+  })
 
 })()
