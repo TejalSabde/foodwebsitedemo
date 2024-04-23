@@ -112,7 +112,7 @@ h6 {
   bottom: 70px;
   z-index: 996;
   background: #000000bf;
-  width: 40px;
+  width: 130px;
   height: 40px;
   border-radius: 50px;
   transition: all 0.4s;
@@ -122,6 +122,23 @@ h6 {
   font-size: 24px;
   color: #f8b318;
   line-height: 0;
+}
+
+.franchise-floating-button label {
+  font-size: 12px;
+  color: #f8b318;
+  padding-right: 4%;
+  cursor: pointer;
+}
+
+@media (max-width: 993px) {
+  .franchise-header {
+    width: 100%;
+  }
+}
+
+.bg-ud-black {
+  background-color: rgb(28 28 28);
 }
 
 /* .franchise-floating-button:hover {
@@ -248,7 +265,7 @@ h6 {
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #31a9e1;
+  background: #f8b318;
 }
 
 .navbar .dropdown ul {
@@ -609,7 +626,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f3f5fa;
+  background-color: #f8b318;
 }
 
 .section-title {
@@ -625,6 +642,10 @@ section {
   padding-bottom: 20px;
   position: relative;
   color: black;
+}
+
+.growth h2::after {
+  background-color: white!important;
 }
 
 .section-title h2::before {
@@ -741,8 +762,31 @@ section {
   # Growth Story
   --------------------------------------------------------------*/
 
-.highlight-timeline {
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, .125);
+}
+
+.highlight-growth {
   background-color: #f8b318;
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: invert(60%);
+}
+
+.accordion-button::after {
+  filter: invert(60%);
+}
+
+.accordion-button {
+  background-color: black;
+  color: white;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: black;
+  color: white;
 }
 
 .growthStory .timeline {
@@ -1180,13 +1224,13 @@ section {
 }
 
 .cta h3 {
-  color: #fff;
+  color: black;
   font-size: 28px;
   font-weight: 700;
 }
 
 .cta p {
-  color: #fff;
+  color: black;
 }
 
 .cta .cta-btn {
@@ -1199,8 +1243,8 @@ section {
   border-radius: 50px;
   transition: 0.5s;
   margin: 10px;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid black;
+  color: black;
 }
 
 .cta .cta-btn:hover {
@@ -1222,6 +1266,9 @@ section {
   }
 }
 
+
+
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -1229,6 +1276,19 @@ section {
   list-style: none;
   margin-bottom: 20px;
 }
+
+@media (min-width: 769px) {
+  .portfolio #portfolio-flters {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 993px) {
+  .portfolio #portfolio-flters {
+    overflow: scroll;
+  }
+}
+
 
 .portfolio #portfolio-flters li {
   cursor: pointer;
@@ -1291,7 +1351,7 @@ section {
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
-  right: 40px;
+  right: 15px;
   font-size: 24px;
   top: calc(50% - 18px);
   color: #fff;
@@ -1694,15 +1754,21 @@ section {
 .form-label {
   padding-left: 5% !important;
   font-size: 0.9rem !important;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  width: 108%
 }
 
-.form-floating>.form-control:not(:placeholder-shown)~label {
-  margin-left: 1.1%;
+.form-control {
+  font-size: 0.9rem;
+  padding: 1rem .75rem;
 }
+
+.form-floating>.form-control {
+  padding-left: 1.3rem;
+}
+
+/* .form-floating>.form-control:not(:placeholder-shown)~label {
+  margin-left: 5%;
+} */
 
 .form-floating>.form-control:focus .form-label {
   margin-left: 1.1%;
