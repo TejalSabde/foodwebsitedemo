@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-  color: #73c5eb;
+  color: #f8b318;
   text-decoration: none;
 }
 
@@ -104,6 +104,10 @@ h6 {
   opacity: 1;
 }
 
+.shawarma-icon {
+  width: 17%;
+}
+
 .franchise-floating-button {
   position: fixed;
   /* visibility: hidden; */
@@ -112,7 +116,7 @@ h6 {
   bottom: 70px;
   z-index: 996;
   background: #000000bf;
-  width: 130px;
+  width: auto;
   height: 40px;
   border-radius: 50px;
   transition: all 0.4s;
@@ -163,6 +167,20 @@ h6 {
   margin-left: 3%;
   border-radius: 50px;
 
+}
+
+.text-color-anim {
+  animation: effect 2s linear infinite;
+}
+
+@keyframes effect {
+  0% {
+    color: white;
+  }
+
+  100% {
+    color: black;
+  }
 }
 
 .nav-bar-bg {
@@ -265,30 +283,40 @@ h6 {
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
   color: #fff;
-  background: #f8b318;
+  background: black;
 }
 
-.navbar .dropdown ul {
-  display: block;
+.cta-btn-container .dropdown ul {
+  /* display: none; */
   position: absolute;
-  left: 14px;
-  top: calc(100% + 30px);
+  left: 60px;
+  transform: scaleY(0);
+  /* height: 0; */
+  /* top: calc(100% + 30px); */
   margin: 0;
   padding: 10px 0;
   z-index: 99;
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0; */
+  /* visibility: hidden; */
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
   border-radius: 4px;
+  list-style: none;
+  transition: transform 0.7s ease;
+  transform-origin: top;
 }
 
-.navbar .dropdown ul li {
+.dropdown-active {
+  visibility: hidden !important;
+
+}
+
+.cta-btn-container .dropdown ul li {
   min-width: 200px;
 }
 
-.navbar .dropdown ul a {
+.cta-btn-container .dropdown ul a {
   padding: 10px 20px;
   font-size: 14px;
   text-transform: none;
@@ -296,41 +324,50 @@ h6 {
   color: #0c3c53;
 }
 
-.navbar .dropdown ul a i {
+.cta-btn-container .dropdown ul a i {
   font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.cta-btn-container .dropdown ul a:hover,
+.cta-btn-container .dropdown ul .active:hover,
+.cta-btn-container .dropdown ul li:hover>a {
   color: #f8b318;
 }
 
-.navbar .dropdown:hover>ul {
+.cta-btn-container .dropdown:hover>ul {
   opacity: 1;
-  top: 100%;
+  top: 90%;
   visibility: visible;
+  /* display: block; */
+  /* height: 18rem; */
+  transform: scaleY(1);
+
 }
 
-.navbar .dropdown .dropdown ul {
+.cta-btn-container .dropdown .dropdown ul {
   top: 0;
   left: calc(100% - 30px);
   visibility: hidden;
+  /* display: none; */
+
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.cta-btn-container .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
   visibility: visible;
+  height: auto;
+  /* display: block; */
+
 }
 
 @media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
+  .cta-btn-container .dropdown .dropdown ul {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .cta-btn-container .dropdown .dropdown:hover>ul {
     left: -100%;
   }
 }
@@ -357,6 +394,10 @@ h6 {
   }
 
   .navbar ul {
+    display: none;
+  }
+
+  .order-1 {
     display: none;
   }
 }
@@ -447,12 +488,16 @@ h6 {
   visibility: visible !important;
 }
 
+/* .text-color {
+  color: #f8b318;
+} */
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   background: black
 }
 
@@ -627,6 +672,7 @@ section {
 
 .section-bg {
   background-color: #f8b318;
+  /* background-color: #f3f5fa; */
 }
 
 .section-title {
@@ -645,7 +691,7 @@ section {
 }
 
 .growth h2::after {
-  background-color: white!important;
+  background-color: white !important;
 }
 
 .section-title h2::before {
@@ -762,6 +808,10 @@ section {
   # Growth Story
   --------------------------------------------------------------*/
 
+.accordion-item {
+  border: 1px solid #f8b318;
+}
+
 .accordion-button:focus {
   box-shadow: none;
   border-color: rgba(0, 0, 0, .125);
@@ -833,7 +883,7 @@ section {
 
 .timeline-panel {
   /* margin-left: 15%; */
-  width: 17%;
+  /* width: 17%; */
   float: left;
   margin: 0 1%;
   border: 1px solid #d4d4d4;
@@ -1039,7 +1089,7 @@ section {
 }
 
 .why-us .accordion-list span {
-  color: #f8b318;
+  /* color: #f8b318; */
   font-weight: 600;
   font-size: 18px;
   padding-right: 10px;
@@ -1256,6 +1306,11 @@ section {
   .cta {
     background-attachment: scroll;
   }
+
+  .cta-btn-container .dropdown:hover>ul {
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
 }
 
 @media (min-width: 769px) {
@@ -1264,6 +1319,7 @@ section {
     align-items: center;
     justify-content: flex-end;
   }
+
 }
 
 
@@ -1537,6 +1593,52 @@ section {
 .team .member .social a+a {
   margin-left: 8px;
 }
+
+/*--------------------------------------------------------------
+# Menu
+--------------------------------------------------------------*/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #f3f5fa;
+  color: black;
+  transform: rotateY(180deg);
+}
+
 
 /*--------------------------------------------------------------
 # Pricing
@@ -1908,9 +2010,13 @@ section {
 
 .contact .php-email-form .loading {
   display: none;
+  position: absolute;
   background: #fff;
   text-align: center;
   padding: 15px;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
 }
 
 .contact .php-email-form .loading:before {
@@ -1923,6 +2029,17 @@ section {
   border: 3px solid #18d26e;
   border-top-color: #eee;
   animation: animate-loading 1s linear infinite;
+}
+
+.loadingContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
 }
 
 .contact .php-email-form .form-group {

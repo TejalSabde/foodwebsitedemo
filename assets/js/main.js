@@ -111,35 +111,26 @@
   /**
    * Scroll to Franchise form
    */
-  let franchiseFloatingButton = document.getElementById('franchise-floating-button');//select('.franchise-floating-button')
-  let franchiseForm = document.getElementById('franchiseForm');//select('.franchise-form')
+  // let franchiseFloatingButton = document.getElementById('franchise-floating-button');//select('.franchise-floating-button')
+  // let franchiseForm = document.getElementById('franchiseForm');//select('.franchise-form')
 
-  if (franchiseFloatingButton) {
-    // const togglefranchiseForm = () => {
-    //   if (window.scrollY > 100) {
-    //     franchiseFloatingButton.classList.add('active')
-    //   } else {
-    //     franchiseFloatingButton.classList.remove('active')
-    //   }
-    // }
-    // window.addEventListener('load', togglefranchiseForm)
-    // onscroll(franchiseForm, togglefranchiseForm)
+  // if (franchiseFloatingButton) {
 
-    franchiseFloatingButton.addEventListener('click', function () {
-      // Check if the click is inside the franchiseForm
-      if (franchiseForm.contains(franchiseFloatingButton)) {
-        // Hide the link
-        franchiseFloatingButton.style.display = 'none';
-      }
-    });
+  //   franchiseFloatingButton.addEventListener('click', function () {
+  //     // Check if the click is inside the franchiseForm
+  //     if (franchiseForm.contains(franchiseFloatingButton)) {
+  //       // Hide the link
+  //       franchiseFloatingButton.style.display = 'none';
+  //     }
+  //   });
 
-    franchiseForm.addEventListener('scroll', function () {
-      // Show the link if it's hidden and the scroll is not at the top
-      if (franchiseForm.scrollTop > 0 && franchiseLink.style.display === 'none') {
-        franchiseFloatingButton.style.display = '';
-      }
-    });
-  }
+  //   franchiseForm.addEventListener('scroll', function () {
+  //     // Show the link if it's hidden and the scroll is not at the top
+  //     if (franchiseForm.scrollTop > 0 && franchiseLink.style.display === 'none') {
+  //       franchiseFloatingButton.style.display = '';
+  //     }
+  //   });
+  // }
 
   /**
    * Mobile nav toggle
@@ -153,9 +144,9 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function (e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
-      e.preventDefault()
+  on('click', '.cta-btn-container .dropdown .cta-btn', function (e) {
+    if ((window.innerWidth <= 800)) {
+      // e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
     }
   }, true)
@@ -292,13 +283,28 @@
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxO8MC-yiRG5axZFjkvl7SkT0lLHM5alllMVcioDca5gUwBwtz-ePW2H_1R-iD3E0BO/exec'
 
   const form = document.forms['franch-form']
-
+  const loader = document.querySelector('.loading')
+  const loadingContainer = document.querySelector('.loading-active')
+  const successMsg = document.querySelector('.sent-message');
   form.addEventListener('submit', e => {
-    e.preventDefault()
+    e.preventDefault();
+    loader.classList.add('d-block');
+    loadingContainer.classList.add('loadingContainer');
+    for (let [key, value] of new FormData(form)) {
+      console.log(`${key}: ${value}`)
+    }
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => alert("Thank you! your form is submitted successfully."))
+      .then(response => {
+        loader.classList.remove('d-block');
+        loadingContainer.classList.remove('loadingContainer');
+        successMsg.classList.add('d-block')
+        setTimeout(() => {
+          successMsg.classList.remove('d-block')
+
+        }, 2000);
+        // alert("Thank you! your form is submitted successfully.")
+      })
       // .then(() => { window.location.reload(); })
       .catch(error => console.error('Error!', error.message))
   })
-
 })()
