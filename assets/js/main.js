@@ -280,31 +280,31 @@
     });
   });
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxO8MC-yiRG5axZFjkvl7SkT0lLHM5alllMVcioDca5gUwBwtz-ePW2H_1R-iD3E0BO/exec'
+  // const scriptURL = 'https://script.google.com/macros/s/AKfycbxO8MC-yiRG5axZFjkvl7SkT0lLHM5alllMVcioDca5gUwBwtz-ePW2H_1R-iD3E0BO/exec'
 
-  const form = document.forms['franch-form']
-  const loader = document.querySelector('.loading')
-  const loadingContainer = document.querySelector('.loading-active')
-  const successMsg = document.querySelector('.sent-message');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    loader.classList.add('d-block');
-    loadingContainer.classList.add('loadingContainer');
-    for (let [key, value] of new FormData(form)) {
-      console.log(`${key}: ${value}`)
-    }
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
-        loader.classList.remove('d-block');
-        loadingContainer.classList.remove('loadingContainer');
-        successMsg.classList.add('d-block')
-        setTimeout(() => {
-          successMsg.classList.remove('d-block')
+  // const form = document.forms['franch-form']
+  // const loader = document.querySelector('.loading')
+  // const loadingContainer = document.querySelector('.loading-active')
+  // const successMsg = document.querySelector('.sent-message');
+  // form.addEventListener('submit', e => {
+  //   e.preventDefault();
+  //   loader.classList.add('d-block');
+  //   loadingContainer.classList.add('loadingContainer');
+  //   for (let [key, value] of new FormData(form)) {
+  //     console.log(`${key}: ${value}`)
+  //   }
+  //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+  //     .then(response => {
+  //       loader.classList.remove('d-block');
+  //       loadingContainer.classList.remove('loadingContainer');
+  //       successMsg.classList.add('d-block')
+  //       setTimeout(() => {
+  //         successMsg.classList.remove('d-block')
 
-        }, 2000);
-        // alert("Thank you! your form is submitted successfully.")
-      })
-      // .then(() => { window.location.reload(); })
-      .catch(error => console.error('Error!', error.message))
-  })
+  //       }, 2000);
+  //       // alert("Thank you! your form is submitted successfully.")
+  //     })
+  //     // .then(() => { window.location.reload(); })
+  //     .catch(error => console.error('Error!', error.message))
+  // })
 })()
