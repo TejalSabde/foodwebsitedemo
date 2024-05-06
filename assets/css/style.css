@@ -671,8 +671,13 @@ section {
 }
 
 .section-bg {
-  background-color: #f8b318;
+  /* background-color: #f8b318; */
   /* background-color: #f3f5fa; */
+  background-color: #eeeeee;
+}
+
+.text-yellow {
+  color: #f8b318 !important;
 }
 
 .section-title {
@@ -1268,7 +1273,8 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(#f8b3187d, rgb(253 239 209)), url(../img/cta-bg.jpg) fixed center center;
+  background: linear-gradient(#f8b318c4, rgb(253 239 209)), url(../img/map-background.jpg) fixed center center;
+  /* background: linear-gradient(#f8b3187d, rgb(253 239 209)), url(../img/cta-bg.jpg) fixed center center; */
   background-size: cover;
   padding: 120px 0;
 }
