@@ -144,12 +144,89 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.cta-btn-container .dropdown .cta-btn', function (e) {
+  // on('click', '.dropdown .cta-btn', function (e) {
+  //   if ((window.innerWidth <= 800)) {
+  //     // e.preventDefault()
+  //     this.nextElementSibling.classList.toggle('dropdown-active');
+
+  //   }
+  // }, true)
+
+
+  // Get all elements with the class "flip-card"
+  var flipCards = document.querySelectorAll('.flip-card');
+
+  // Iterate over each flip card
+  flipCards.forEach(function (flipCard) {
+    // Add event listener for click
     if ((window.innerWidth <= 800)) {
-      // e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
+      flipCard.addEventListener('click', function () {
+        // Find the flip card inner element
+        var flipCardInner = flipCard.querySelector('.flip-card-inner');
+
+        // Toggle the class on the flip card inner element
+        flipCardInner.classList.toggle('toggle-flip');
+      });
+    } else {
+      flipCard.addEventListener('mouseover', function () {
+        // Find the flip card inner element
+        var flipCardInner = flipCard.querySelector('.flip-card-inner');
+
+        // Toggle the class on the flip card inner element
+        flipCardInner.classList.add('toggle-flip');
+      });
+      flipCard.addEventListener('mouseout', function () {
+        // Find the flip card inner element
+        var flipCardInner = flipCard.querySelector('.flip-card-inner');
+
+        // Toggle the class on the flip card inner element
+        flipCardInner.classList.remove('toggle-flip');
+      });
     }
-  }, true)
+  });
+
+
+  // Get all elements with the class "dropdown"
+  var dropdowns = document.querySelectorAll('.dropdown');
+
+  // Iterate over each dropdown
+  dropdowns.forEach(function (dropdown) {
+    // Add event listener for click
+    if ((window.innerWidth <= 800)) {
+      dropdown.addEventListener('click', function () {
+        // Toggle the class on the next sibling span element
+        // Find the span element inside the dropdown
+        var spanElement = dropdown.querySelector('span');
+        var ulElement = dropdown.querySelector('ul');
+
+        // Toggle the class on the found span element
+        spanElement.classList.toggle('cta-btn-bg');
+        ulElement.classList.toggle('mobile-show-dropdown');
+      });
+    } else {
+      dropdown.addEventListener('mouseover', function () {
+        // Toggle the class on the next sibling span element
+        // Find the span element inside the dropdown
+        var spanElement = dropdown.querySelector('span');
+        var ulElement = dropdown.querySelector('ul');
+
+        // Toggle the class on the found span element
+        spanElement.classList.add('cta-btn-bg');
+        ulElement.classList.add('web-show-dropdown');
+      })
+      dropdown.addEventListener('mouseout', function () {
+        // Toggle the class on the next sibling span element
+        // Find the span element inside the dropdown
+        var spanElement = dropdown.querySelector('span');
+        var ulElement = dropdown.querySelector('ul');
+
+        // Toggle the class on the found span element
+        spanElement.classList.remove('cta-btn-bg');
+        ulElement.classList.remove('web-show-dropdown');
+      })
+    }
+  });
+
 
   /**
    * Scrool with ofset on links with a class name .scrollto
@@ -279,6 +356,10 @@
       mirror: false
     });
   });
+
+  on('click', '.clients', function (e) {
+    window.location = "#cta";
+  })
 
   // const scriptURL = 'https://script.google.com/macros/s/AKfycbxO8MC-yiRG5axZFjkvl7SkT0lLHM5alllMVcioDca5gUwBwtz-ePW2H_1R-iD3E0BO/exec'
 
