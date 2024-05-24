@@ -1,0 +1,20 @@
+.cta-btn-colour-change {
+    background: #f8b318;
+    border: 2px solid #f8b318;
+  }
+
+  /* Mobile styles */
+@media (max-width: 1024px) {
+    .dropdown ul {
+      display: none;
+    }
+  
+    .show{
+      display: block!important;
+    }
+  
+    .active {
+      background: #f8b318!important;
+      border: 2px solid #f8b318!important;
+    }
+  }
