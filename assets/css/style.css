@@ -299,7 +299,7 @@ h6 {
   transition: 0.3s;
   border-radius: 4px;
   list-style: none;
-  transition: transform 0.7s ease;
+  /* transition: transform 0.7s ease; */
   transform-origin: top;
 }
 
@@ -1305,6 +1305,9 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+  .cta-btn-container .dropdown ul {
+    transition: transform 0.7s ease;
   }
 
 }
