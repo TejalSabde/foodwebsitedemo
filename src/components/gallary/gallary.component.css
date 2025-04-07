@@ -1,0 +1,91 @@
+.gallery img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery .image-wrapper {
+    position: relative;
+    padding-bottom: 100%;
+    /* Maintain aspect ratio */
+    overflow: hidden;
+}
+
+.gallery .image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Fill the container while maintaining aspect ratio */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Adjust as per your design */
+}
+
+.image-wrapper {
+    width: calc(33.33% - 20px);
+    /* Adjust based on the number of images per row */
+    margin-bottom: 20px;
+    /* Adjust as needed for the desired distance between images */
+    box-sizing: border-box;
+}
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.modal-img {
+    /* width: 100%;
+    height: auto; */
+    height: 90vh;
+    /* Set the height to 100% of the viewport height */
+    width: auto;
+    /* Let the width adjust automatically based on the image aspect ratio */
+    max-width: 100%;
+    /* Ensure the image doesn't exceed the width of its container */
+    object-fit: contain;
+}
+
+/* Ensure the modal takes up the full screen */
+.modal-dialog {
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-content {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+    padding: 0;
+    background-color: black;
+}
+
+.close {
+    position: absolute;
+    background: transparent;
+    border: 0;
+    font-size: 3rem;
+    right: 0;
+}
+
+.lg-download{
+    display: none !important
+}

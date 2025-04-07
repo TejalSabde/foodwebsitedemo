@@ -1,0 +1,87 @@
+<div id="brandPresence" class="cta">
+    <!-- data-aos="zoom-in" -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>Brand Presence</h3>
+                <p>The model delivers high quality, freshly made, and value for money to the Lebanese food through 30+
+                    outlets operational in Thane, Mumbai, Navi Mumbai and Pune.</p>
+            </div>
+        </div>
+        <div class="cta-btn-container text-center justify-content-center row">
+            <!-- <a class="cta-btn align-middle">Click to view map</a> -->
+            <div class="dropdown col-md-3 p-3"><span class="text-dark cta-btn align-moddle" id="thane"
+                    (click)="toggleClass(1)">Thane</span>
+                <ul id="thane-list" (click)="onMenuClick($event)" [class.show]="isMenuVisible[1]">
+                    <li><a href="https://maps.app.goo.gl/xedpyBBmFZ8EkQBfA" target="_blank">Vasant Vihar</a></li>
+                    <li><a href="https://maps.app.goo.gl/WCWaVZmYCbn4kM6P9" target="_blank">Hariniwas circle</a></li>
+                    <li><a href="https://maps.app.goo.gl/F9BghnKrxG2ExSNu9" target="_blank">Thane station</a></li>
+                    <li><a href="https://maps.app.goo.gl/qHTBF53mRFxgAH1L8" target="_blank">Hiranandani Estate</a></li>
+                    <li><a href="https://maps.app.goo.gl/tss3tdxgeS8R1Xvw5" target="_blank">Mira Road</a></li>
+                    <li><a href="https://maps.app.goo.gl/Z8xhF7nJrBMJ9Lwy9" target="_blank">Dombivali</a></li>
+                    <li><a href="https://maps.app.goo.gl/gNajQsBqTNfhbrPW8" target="_blank">Kalyan</a></li>
+                    <li><a href="https://maps.app.goo.gl/KFA3aMnQw3Uu7c889" target="_blank">Ulhasnagar</a></li>
+                    <li><a href="https://maps.app.goo.gl/CCk8MnNXrxq3Crzo7" target="_blank">Badlapur</a></li>
+                    <li><a href="https://maps.app.goo.gl/ZUqJ8S9AxFrbCJvv9" target="_blank">Metro Mall, Kalyan</a></li>
+                    <li><a href="https://maps.app.goo.gl/Nodcevm3uBMELEV5A" target="_blank">Kalwa</a></li>
+                </ul>
+            </div>
+            <div class="dropdown col-md-3 p-3"><span class="text-dark cta-btn align-moddle" id="mum"
+                (click)="toggleClass(0)">Mumbai</span>
+            <ul id="mum-list" (click)="onMenuClick($event)" [class.show]="isMenuVisible[0]">
+                <li><a href="https://maps.app.goo.gl/a3jz9b8DVdJ4ygq77" target="_blank">Parel</a></li>
+                <li><a href="https://maps.app.goo.gl/nJEfnmRyAqAAaW2L6" target="_blank">Dadar</a></li>
+                <li><a href="https://maps.app.goo.gl/beGvCxqWLagRQ8rc8" target="_blank">Matunga</a></li>
+                <li><a href="https://maps.app.goo.gl/Ao2msMa43s5U2ivRA" target="_blank">Andheri</a></li>
+                <li><a href="https://maps.app.goo.gl/qo1yqL2G1gD5pBqB6" target="_blank">Marol</a></li>
+                <li><a href="https://maps.app.goo.gl/WK8kYy2WqtKYN1nh6" target="_blank">Malad</a></li>
+                <li><a href="https://maps.app.goo.gl/VRpc6FDz63T6FMsa7" target="_blank">Thakur Village</a></li>
+                <li><a href="https://maps.app.goo.gl/ccPfy4Th7LLzi4E88" target="_blank">Powai</a></li>
+                <li><a href="https://maps.app.goo.gl/MZ7f2ePekxiL6Syg9" target="_blank">Chembur</a></li>
+                <li><a href="https://maps.app.goo.gl/afYomYSEJWNfkgov9" target="_blank">Ghatkopar</a></li>
+                <li><a href="https://maps.app.goo.gl/AjBETDL12Cj18BwEA" target="_blank">Mulund</a></li>
+                <li><a href="https://maps.app.goo.gl/porGdeW65Xdg3Tea6" target="_blank">Vile Parle</a></li>
+
+            </ul>
+        </div>
+            <div class="dropdown col-md-3 p-3"><span class="text-dark cta-btn align-moddle" id="navi-mum"
+                    (click)="toggleClass(2)">Navi Mumbai</span>
+                <ul id="navi-mum-list" (click)="onMenuClick($event)" [class.show]="isMenuVisible[2]">
+                    <li><a href="https://maps.app.goo.gl/HVcJvfA7LBzVe4gM6" target="_blank">Airoli</a></li>
+                    <li><a href="https://maps.app.goo.gl/rdwQgzpjun3mNPen9" target="_blank">Seawoods</a></li>
+                    <li><a href="https://maps.app.goo.gl/qJjZ128oevcuuxG97" target="_blank">Kharghar</a></li>
+                </ul>
+            </div>
+            <div class="dropdown col-md-3 p-3"><span class="text-dark cta-btn align-moddle" id="pune"
+                    (click)="toggleClass(3)">Pune</span>
+                <ul id="pune-list" (click)="onMenuClick($event)" [class.show]="isMenuVisible[3]">
+                    <li><a href="https://maps.app.goo.gl/QhB5dRaRoverlayycbScVZb9" target="_blank">Kothrud</a></li>
+                    <li><a href="https://maps.app.goo.gl/AcsPZbnCJy4CtMan8" target="_blank">Koregaon Park</a></li>
+                    <li><a href="https://maps.app.goo.gl/Laptmdab7ht5PUE4A" target="_blank">Salunkhe Vihar</a></li>
+                    <li><a href="https://maps.app.goo.gl/KX7LNQDzxum7TL7y6" target="_blank">Magarpatta</a></li>
+                    <li><a href="https://maps.app.goo.gl/Hk9HRe1rQCf9zNfS9" target="_blank">Aundh</a></li>
+                    <li><a >Viman nagar</a></li>
+                    <li><a >Sinhagad road</a></li>
+                    <li><a >Bharati Vidyapeeth</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center">
+            <!-- <img *ngIf="!isMobile" src="assets/img/food-pics/brand-presence.png" class="w-100"> -->
+            <div *ngIf="!isMobile" style="overflow: hidden;" (mouseleave)="onMouseLeave()" (click)="onMouseEnter()">
+                <iframe id="mapiframe"
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1B1p-Y51gSjTxjFfcqgtCYoLgFeMaAlc&ehbc=2E312F&noprof=1&ll=19.179684168135786%2C73.20103139792188&z=12"
+                    frameborder="0" style="border:0; margin-top: -150px;" width="2050" height="700"></iframe>
+            </div>
+            <div *ngIf="isMobile" style="overflow: hidden;">
+                <iframe
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1B1p-Y51gSjTxjFfcqgtCYoLgFeMaAlc&ehbc=2E312F&noprof=1&ll=19.223512148398093%2C72.92148277552538&z=10"
+                    frameborder="0" style="border:0; margin-top: -150px;" width="350" height="580"
+                    allowfullscreen="false"></iframe>
+                <!-- <iframe src="https://www.google.com/maps/d/u/0/edit?mid=1B1p-Y51gSjTxjFfcqgtCYoLgFeMaAlc&usp=sharing" frameborder="0" allowfullscreen width="350" height="400" frameBorder="0"></iframe> -->
+            </div>
+        </div>
+    </div>
+
+</div>
