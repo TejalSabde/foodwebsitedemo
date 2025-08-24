@@ -79,8 +79,8 @@ export class GrowthStoryComponent implements OnInit {
         { month: "MARCH", title: "FRANCHISE NO. 27", description: "VIMAN NAGAR, PUNE" },
         { month: "APRIL", title: "OUTLET NO. 9", description: "SINHGAD ROAD, PUNE" },
         { month: "APRIL", title: "FRANCHISE NO. 28", description: "BHARATI VIDYAPEETH, PUNE" },
-        { month: "JUNE", title: "FRANCHISE NO. 29", description: "ULWE" },
         { month: "JULY", title: "OUTLET NO. 10", description: "KHAR" },
+        { month: "AUGUST", title: "FRANCHISE NO. 29", description: "ULWE" },
       ]
     }
   ];
