@@ -1,5 +1,5 @@
 .mobile-nav-toggle {
-  color: #fff;
+  color: #000;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -57,7 +57,7 @@
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: black!important;
+  color: black !important;
 }
 
 .navbar-mobile a:hover,
@@ -172,4 +172,54 @@
   visibility: visible;
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.header-scrolled {
+  background: #00000066
+}
+
+/* Default color (before scroll) */
+.navbar {
+  color: #000;
+  /* or your default */
+  transition: background 0.3s ease, color 0.3s ease;
+  position: absolute;
+  right: 5%;
+}
+
+.desktop-navbar{
+  
+    color: #000;
+  /* or your default */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.mobile-navbar {
+  position: absolute;
+  right: 10%;
+}
+
+.desktop-navbar {
+  position: absolute;
+  right: 25%;
+}
+
+/* After scroll */
+.navbar.scrolled {
+  color: #fff;
+}
+
+/* Dropdown icon */
+.navbar.scrolled .bi {
+  color: #fff;
+}
+
+/* Active link */
+.navbar.scrolled .nav-link.active {
+  color: #f3b318;
+  /* brand gold */
+}
+
+.navbar a {
+  color: inherit;
+  transition: color 0.3s ease;
 }

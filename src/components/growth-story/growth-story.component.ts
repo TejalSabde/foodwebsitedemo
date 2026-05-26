@@ -10,35 +10,23 @@ export class GrowthStoryComponent implements OnInit {
   length: number = 0;
   growthStory = [
     {
-      year: 2019,
-      summary: "2 Outlets",
+      year: "2019 - 2023",
+      summary: "3 Outlets, 19 Franchises",
       events: [
-        { month: "MARCH", title: "Startup", description: "FOOD TRUCK" },
-        { month: "JULY", title: "OUTLET NO. 1", description: "VASANT VIHAR, THANE" },
-        { month: "DECEMBER", title: "OUTLET NO. 2", description: "HARINIWAS CIRCLE, THANE" }
-      ]
-    },
-    {
-      year: 2021,
-      summary: "1 Outlet, 5 Franchises",
-      events: [
-        { month: "APRIL", title: "Kitchen", description: "CENTRAL KITCHEN" },
-        { month: "FEBRUARY", title: "OUTLET NO. 3", description: "HIRANANDANI ESTATE" },
-        { month: "AUGUST", title: "FRANCHISE NO. 1", description: "AIROLI" },
-        { month: "OCTOBER", title: "FRANCHISE NO. 2", description: "MALAD" },
-        { month: "NOVEMBER", title: "FRANCHISE NO. 3", description: "MULUND" },
-        { month: "NOVEMBER", title: "FRANCHISE NO. 4", description: "THANE STATION" },
-        { month: "DECEMBER", title: "FRANCHISE NO. 5", description: "THAKUR VILLAGE" }
-      ]
-    },
-    {
-      year: 2022,
-      summary: "4 Franchises",
-      events: [
-        { month: "JANUARY", title: "FRANCHISE NO. 6", description: "KORUM, THANE" },
-        { month: "JANUARY", title: "FRANCHISE NO. 7", description: "NALLASOPARA" },
-        { month: "FEBRUARY", title: "FRANCHISE NO. 8", description: "DOMBIVALI" },
-        { month: "SEPTEMBER", title: "FRANCHISE NO. 9", description: "DOMBIVALI" }
+        { month: "MARCH 2019", title: "Startup", description: "FOOD TRUCK" },
+        { month: "JULY 2019", title: "OUTLET NO. 1", description: "VASANT VIHAR, THANE" },
+        { month: "DECEMBER 2019", title: "OUTLET NO. 2", description: "HARINIWAS CIRCLE, THANE" },
+        { month: "APRIL 2021", title: "Kitchen", description: "CENTRAL KITCHEN" },
+        { month: "FEBRUARY 2021", title: "OUTLET NO. 3", description: "HIRANANDANI ESTATE" },
+        { month: "AUGUST 2021", title: "FRANCHISE NO. 1", description: "AIROLI" },
+        { month: "OCTOBER 2021", title: "FRANCHISE NO. 2", description: "MALAD" },
+        { month: "NOVEMBER 2021", title: "FRANCHISE NO. 3", description: "MULUND" },
+        { month: "NOVEMBER 2021", title: "FRANCHISE NO. 4", description: "THANE STATION" },
+        { month: "DECEMBER 2021", title: "FRANCHISE NO. 5", description: "THAKUR VILLAGE" },
+        { month: "JANUARY 2022", title: "FRANCHISE NO. 6", description: "KORUM, THANE" },
+        { month: "JANUARY 2022", title: "FRANCHISE NO. 7", description: "NALLASOPARA" },
+        { month: "FEBRUARY 2022", title: "FRANCHISE NO. 8", description: "DOMBIVALI" },
+        { month: "SEPTEMBER 2022", title: "FRANCHISE NO. 9", description: "DOMBIVALI" }
       ]
     },
     {

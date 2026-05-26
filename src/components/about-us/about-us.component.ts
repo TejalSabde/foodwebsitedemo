@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent {
+  selectedCard: number = 2; // default featured card
 
+  selectCard(cardNumber: number): void {
+    this.selectedCard = cardNumber;
+  }
 }
