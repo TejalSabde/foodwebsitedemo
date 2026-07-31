@@ -6,7 +6,7 @@
       </div>
 
       <!-- LEFT SIDE (accordion) -->
-      <div class="col-lg-9 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
+      <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
         <div class="content">
           <strong>30+ Outlets in Thane, Mumbai, Navi Mumbai & Pune</strong>
         </div>
@@ -15,16 +15,21 @@
         <div class="accordion-list">
           <ul>
             <li *ngFor="let item of growthStory; let i = index">
-              <a data-bs-toggle="collapse" class="collapse text-dark" [attr.data-bs-target]="'#accordion-list-' + i">
+              <a data-bs-toggle="collapse"
+                 class="collapse text-dark"
+                 [attr.data-bs-target]="'#accordion-list-' + i">
                 <span class="text-yellow">Year: {{ item.year }}</span> {{ item.summary }}
                 <i class="bx bx-chevron-down icon-show"></i>
                 <i class="bx bx-chevron-up icon-close"></i>
               </a>
 
-              <div [id]="'accordion-list-' + i" class="collapse" [ngClass]="{ 'show': i === 0 }"
-                data-bs-parent=".accordion-list">
+              <div [id]="'accordion-list-' + i"
+                   class="collapse"
+                   [ngClass]="{ 'show': i === 0 }"
+                   data-bs-parent=".accordion-list">
                 <div class="accordion-body row">
-                  <div class="timeline-panel col m-1" *ngFor="let event of item.events">
+                  <div class="timeline-panel col m-1"
+                       *ngFor="let event of item.events">
                     <div class="timeline-heading">
                       <h5 class="timeline-title">{{ event.month }}</h5>
                       <h6 class="timeline-title">{{ event.title }}</h6>
@@ -41,8 +46,18 @@
       </div>
 
       <!-- RIGHT SIDE (images + SVG) -->
-      <div class="container col-lg-3 mt-3" *ngIf="!isMobile">
-        <img src="assets/img/transitionFinal.gif" alt="Loading..." />
+      <div class="container col-lg-5" *ngIf="!isMobile">
+        <img src="assets/img/food-pics/truck.png" class="image1">
+        <img src="assets/img/food-pics/shawarma-shop-animated.png" class="image2">
+        <svg class="line" viewBox="0 0 650 500">
+          <path #path fill="transparent" class="path"
+                d="M220 500 Q 380 460, 320 320 T 350 150"
+                stroke="black" stroke-width="4" fill="none" />
+          <circle cx="220" cy="500" r="3" fill="#f3b318" />
+          <circle cx="350" cy="150" r="3" fill="#f3b318" />
+          <path fill="#f3b318" d="M12 30L6 8H30L12 30ZM12 30V2"
+                class="new-path" />
+        </svg>
       </div>
     </div>
   </div>

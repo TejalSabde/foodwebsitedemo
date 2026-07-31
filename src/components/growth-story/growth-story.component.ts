@@ -27,69 +27,68 @@ export class GrowthStoryComponent implements OnInit {
         { month: "AUGUST", title: "FRANCHISE NO. 1", description: "AIROLI" },
         { month: "OCTOBER", title: "FRANCHISE NO. 2", description: "MALAD" },
         { month: "NOVEMBER", title: "FRANCHISE NO. 3", description: "MULUND" },
-        { month: "NOVEMBER", title: "FRANCHISE NO. 4", description: "THANE STATION" },
-        { month: "DECEMBER", title: "FRANCHISE NO. 5", description: "THAKUR VILLAGE" }
+        { month: "NOVEMBER", title: "OUTLET NO. 4", description: "THANE STATION" },
+        { month: "DECEMBER", title: "FRANCHISE NO. 4", description: "THAKUR VILLAGE" }
       ]
     },
     {
       year: 2022,
       summary: "4 Franchises",
       events: [
-        { month: "JANUARY", title: "FRANCHISE NO. 6", description: "KORUM, THANE" },
-        { month: "JANUARY", title: "FRANCHISE NO. 7", description: "NALLASOPARA" },
-        { month: "FEBRUARY", title: "FRANCHISE NO. 8", description: "DOMBIVALI" },
-        { month: "SEPTEMBER", title: "FRANCHISE NO. 9", description: "DOMBIVALI" }
+        { month: "JANUARY", title: "FRANCHISE NO. 5", description: "DOMBIVALI" },
+        { month: "JANUARY", title: "FRANCHISE NO. 6", description: "KHARGHAR" },
+        { month: "JANUARY", title: "FRANCHISE NO. 7", description: "DADAR" },
+        { month: "FEBRUARY", title: "FRANCHISE NO. 8", description: "POWAI" },
       ]
     },
     {
       year: 2023,
       summary: "10 Franchises",
       events: [
-        { month: "FEBRUARY", title: "FRANCHISE NO. 10", description: "MAROL" },
-        { month: "MARCH", title: "FRANCHISE NO. 11", description: "MIRA ROAD" },
-        { month: "MAY", title: "FRANCHISE NO. 12", description: "KALYAN" },
-        { month: "JUNE", title: "FRANCHISE NO. 13", description: "KOTHRUD, PUNE" },
-        { month: "JUNE", title: "FRANCHISE NO. 14", description: "ULHASNAGAR" },
-        { month: "JULY", title: "FRANCHISE NO. 15", description: "KOREGAON, PUNE" },
-        { month: "SEPTEMBER", title: "FRANCHISE NO. 16", description: "ANDHERI, LOKHANDWALA" },
-        { month: "SEPTEMBER", title: "FRANCHISE NO. 17", description: "SEAWOODS" },
-        { month: "NOVEMBER", title: "FRANCHISE NO. 18", description: "BADLAPUR" },
-        { month: "DECEMBER", title: "FRANCHISE NO. 19", description: "CHEMBUR" }
+        { month: "FEBRUARY", title: "FRANCHISE NO. 9", description: "MAROL" },
+        { month: "MARCH", title: "FRANCHISE NO. 10", description: "MIRA ROAD" },
+        { month: "MAY", title: "FRANCHISE NO. 11", description: "KALYAN" },
+        { month: "JUNE", title: "FRANCHISE NO. 12", description: "KOTHRUD, PUNE" },
+        { month: "JUNE", title: "FRANCHISE NO. 13", description: "ULHASNAGAR" },
+        { month: "JULY", title: "FRANCHISE NO. 14", description: "KOREGAON, PUNE" },
+        { month: "SEPTEMBER", title: "FRANCHISE NO. 15", description: "ANDHERI, LOKHANDWALA" },
+        { month: "SEPTEMBER", title: "FRANCHISE NO. 16", description: "SEAWOODS" },
+        { month: "NOVEMBER", title: "FRANCHISE NO. 17", description: "BADLAPUR" },
+        { month: "DECEMBER", title: "FRANCHISE NO. 18", description: "CHEMBUR" }
       ]
     },
     {
       year: 2024,
-      summary: "9 Franchises",
+      summary: "1 Outlet, 8 Franchises",
       events: [
-        { month: "JANUARY", title: "FRANCHISE NO. 20", description: "GHATKOPAR" },
-        { month: "JANUARY", title: "FRANCHISE NO. 21", description: "PAREL" },
-        { month: "MARCH", title: "FRANCHISE NO. 22", description: "MATUNGA" },
-        { month: "APRIL", title: "FRANCHISE NO. 23", description: "SALUNKHE VIHAR, PUNE" },
-        { month: "JULY", title: "FRANCHISE NO. 24", description: "VILE PARLE" },
-        { month: "SEPTEMBER", title: "FRANCHISE NO. 25", description: "AUNDH, PUNE" },
-        { month: "OCTOBER", title: "FRANCHISE NO. 26", description: "MAGARPATTA, PUNE" },
-        { month: "OCTOBER", title: "FRANCHISE NO. 27", description: "KALWA" },
-        { month: "DECEMBER", title: "FRANCHISE NO. 28", description: "METRO MALL, KALYAN" }
+        { month: "JANUARY", title: "FRANCHISE NO. 19", description: "GHATKOPAR" },
+        { month: "JANUARY", title: "FRANCHISE NO. 20", description: "PAREL" },
+        { month: "MARCH", title: "FRANCHISE NO. 21", description: "MATUNGA" },
+        { month: "APRIL", title: "FRANCHISE NO. 22", description: "SALUNKHE VIHAR, PUNE" },
+        { month: "JULY", title: "FRANCHISE NO. 23", description: "VILE PARLE" },
+        { month: "SEPTEMBER", title: "FRANCHISE NO. 24", description: "AUNDH, PUNE" },
+        { month: "OCTOBER", title: "FRANCHISE NO. 25", description: "MAGARPATTA, PUNE" },
+        { month: "OCTOBER", title: "OUTLET NO. 5", description: "KALWA" },
+        { month: "DECEMBER", title: "FRANCHISE NO. 26", description: "METRO MALL, KALYAN" }
       ]
     },
     {
       year: 2025,
-      summary: "2 Outlets, 5 Franchises",
+      summary: "1 Outlet, 5 Franchises",
       events: [
-        { month: "MARCH", title: "FRANCHISE NO. 29", description: "VIMAN NAGAR, PUNE" },
-        { month: "APRIL", title: "OUTLET NO. 4", description: "SINHGAD ROAD, PUNE" },
-        { month: "APRIL", title: "FRANCHISE NO. 30", description: "BHARATI VIDYAPEETH, PUNE" },
-        { month: "JULY", title: "OUTLET NO. 5", description: "KHAR" },
-        { month: "AUGUST", title: "FRANCHISE NO. 31", description: "ULWE" },
-        { month: "October", title: "FRANCHISE NO. 32", description: "AMBERNATH" },
-        { month: "October", title: "FRANCHISE NO. 33", description: "BHANDUP" },
+        { month: "MARCH", title: "FRANCHISE NO. 27", description: "VIMAN NAGAR, PUNE" },
+        { month: "APRIL", title: "OUTLET NO. 6", description: "SINHGAD ROAD, PUNE" },
+        { month: "APRIL", title: "FRANCHISE NO. 28", description: "BHARATI VIDYAPEETH, PUNE" },
+        { month: "AUGUST", title: "FRANCHISE NO. 29", description: "ULWE" },
+        { month: "October", title: "FRANCHISE NO. 30", description: "AMBERNATH" },
+        { month: "October", title: "FRANCHISE NO. 31", description: "BHANDUP" },
       ]
     },
     {
       year: 2026,
       summary: "1 Franchise",
       events: [
-        { month: "FEBRUARY", title: "FRANCHISE NO. 34", description: "DOMBIVALI" }
+        { month: "FEBRUARY", title: "FRANCHISE NO. 32", description: "DOMBIVALI" }
       ]
     }
   ];
