@@ -1,91 +1,105 @@
-.gallery img {
-    cursor: pointer;
-    transition: transform 0.2s;
+section{
+  padding: 4%;
+  /* background: #000; */
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(12,1fr);
+
+    grid-auto-rows:260px;
+
+    gap:18px;
 }
 
-.gallery .image-wrapper {
-    position: relative;
-    padding-bottom: 100%;
-    /* Maintain aspect ratio */
-    overflow: hidden;
+.gallery-item{
+
+    overflow:hidden;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-.gallery .image-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.gallery-item img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+}
+
+/* -------- Row 1 -------- */
+
+.four{
+
+    grid-column:span 3;
+}
+
+/* -------- Row 2 -------- */
+
+.three{
+
+    grid-column:span 4;
+}
+
+/* -------- Row 3 -------- */
+
+.five{
+
+    grid-column:span 2;
+}
+
+.five-last{
+
+    grid-column:span 4;
+}
+
+/* ===========================
+        TABLET & MOBILE
+=========================== */
+
+@media (max-width: 992px) {
+  .gallery-section {
+    padding-top: 15%;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Fill the container while maintaining aspect ratio */
-}
-
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* Adjust as per your design */
-}
-
-.image-wrapper {
-    width: calc(33.33% - 20px);
-    /* Adjust based on the number of images per row */
-    margin-bottom: 20px;
-    /* Adjust as needed for the desired distance between images */
-    box-sizing: border-box;
-}
-
-.image-wrapper img {
-    width: 100%;
-}
-
-.modal-img {
-    /* width: 100%;
-    height: auto; */
-    height: 90vh;
-    /* Set the height to 100% of the viewport height */
-    width: auto;
-    /* Let the width adjust automatically based on the image aspect ratio */
     max-width: 100%;
-    /* Ensure the image doesn't exceed the width of its container */
-    object-fit: contain;
+    overflow-x: hidden;
 }
 
-/* Ensure the modal takes up the full screen */
-.modal-dialog {
-    max-width: 100%;
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    gap: 12px;
+  }
+
+  /* Remove desktop spans */
+  .four,
+  .three,
+  .five,
+  .five-last {
+    grid-column: span 1;
+  }
+
+  .gallery-item img {
     height: 100%;
-    margin: 0;
-    padding: 0;
+  }
 }
 
-.modal-content {
-    height: 100%;
-    border: none;
-    border-radius: 0;
-}
+/* ===========================
+        SMALL MOBILE
+=========================== */
 
-.modal-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* height: 100%; */
-    padding: 0;
-    background-color: black;
-}
+@media (max-width:576px) {
 
-.close {
-    position: absolute;
-    background: transparent;
-    border: 0;
-    font-size: 3rem;
-    right: 0;
-}
-
-.lg-download{
-    display: none !important
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 120px;
+    gap: 8px;
+  }
 }

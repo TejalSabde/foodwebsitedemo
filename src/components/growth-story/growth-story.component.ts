@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { mumbaiLocations, naviMumbaiLocations, puneLocations, thaneLocations } from 'src/utils/constants';
 
 @Component({
   selector: 'app-growth-story',
@@ -23,9 +24,9 @@ export class GrowthStoryComponent implements OnInit {
         { month: "NOVEMBER 2021", title: "FRANCHISE NO. 3", description: "MULUND" },
         { month: "NOVEMBER 2021", title: "FRANCHISE NO. 4", description: "THANE STATION" },
         { month: "DECEMBER 2021", title: "FRANCHISE NO. 5", description: "THAKUR VILLAGE" },
-        { month: "JANUARY 2022", title: "FRANCHISE NO. 6", description: "KORUM, THANE" },
-        { month: "JANUARY 2022", title: "FRANCHISE NO. 7", description: "NALLASOPARA" },
-        { month: "FEBRUARY 2022", title: "FRANCHISE NO. 8", description: "DOMBIVALI" },
+        { month: "JANUARY 2022", title: "FRANCHISE NO. 6", description: "KHARGHAR" },
+        { month: "JANUARY 2022", title: "FRANCHISE NO. 7", description: "DADAR" },
+        { month: "FEBRUARY 2022", title: "FRANCHISE NO. 8", description: "POWAI" },
         { month: "SEPTEMBER 2022", title: "FRANCHISE NO. 9", description: "DOMBIVALI" }
       ]
     },
@@ -38,7 +39,7 @@ export class GrowthStoryComponent implements OnInit {
         { month: "MAY", title: "FRANCHISE NO. 12", description: "KALYAN" },
         { month: "JUNE", title: "FRANCHISE NO. 13", description: "KOTHRUD, PUNE" },
         { month: "JUNE", title: "FRANCHISE NO. 14", description: "ULHASNAGAR" },
-        { month: "JULY", title: "FRANCHISE NO. 15", description: "KOREGAON, PUNE" },
+        { month: "JULY", title: "FRANCHISE NO. 15", description: "KOREGAON PARK, PUNE" },
         { month: "SEPTEMBER", title: "FRANCHISE NO. 16", description: "ANDHERI, LOKHANDWALA" },
         { month: "SEPTEMBER", title: "FRANCHISE NO. 17", description: "SEAWOODS" },
         { month: "NOVEMBER", title: "FRANCHISE NO. 18", description: "BADLAPUR" },
@@ -65,7 +66,7 @@ export class GrowthStoryComponent implements OnInit {
       summary: "2 Outlets, 5 Franchises",
       events: [
         { month: "MARCH", title: "FRANCHISE NO. 29", description: "VIMAN NAGAR, PUNE" },
-        { month: "APRIL", title: "OUTLET NO. 4", description: "SINHGAD ROAD, PUNE" },
+        { month: "APRIL", title: "OUTLET NO. 4", description: "SINHAGAD ROAD, PUNE" },
         { month: "APRIL", title: "FRANCHISE NO. 30", description: "BHARATI VIDYAPEETH, PUNE" },
         { month: "JULY", title: "OUTLET NO. 5", description: "KHAR" },
         { month: "AUGUST", title: "FRANCHISE NO. 31", description: "ULWE" },
@@ -81,7 +82,12 @@ export class GrowthStoryComponent implements OnInit {
       ]
     }
   ];
-
+  allLocations = [
+    ...thaneLocations,
+    ...mumbaiLocations,
+    ...naviMumbaiLocations,
+    ...puneLocations
+  ];
 
   @ViewChild('path') animatedPath!: ElementRef<SVGPathElement>;
 
@@ -93,10 +99,18 @@ export class GrowthStoryComponent implements OnInit {
       // this.animatedPath.nativeElement.style.strokeDasharray = '900, 900';
       // this.animatedPath.nativeElement.style.strokeDashoffset = '900';
     }, 2000);
+  }
 
+  getLocationLink(description: string): string | null {
+    if (!description) return null;
 
+    const desc = description.toLowerCase();
 
+    const location = this.allLocations.find(loc =>
+      desc.includes(loc.name.toLowerCase())
+    );
 
+    return location ? location.link : null;
   }
 
   @HostListener('window:scroll', ['$event'])

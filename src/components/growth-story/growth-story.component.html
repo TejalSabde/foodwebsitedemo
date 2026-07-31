@@ -40,7 +40,18 @@
                         <h6 class="timeline-title">{{ event.title }}</h6>
                       </div>
                       <div class="timeline-body">
-                        <p>{{ event.description }}</p>
+                        <p>
+                          <ng-container *ngIf="getLocationLink(event.description) as link; else plainText">
+
+                            <a [href]="link" target="_blank" rel="noopener noreferrer" class="location-link">
+
+                              {{ event.description }}
+                            </a>
+                          </ng-container>
+                          <ng-template #plainText>
+                            {{ event.description }}
+                          </ng-template>
+                        </p>
                       </div>
                     </div>
                   </div>

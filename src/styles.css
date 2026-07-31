@@ -132,6 +132,7 @@ h6 {
   position: fixed;
   /* visibility: hidden; */
   /* opacity: 0; */
+  padding: 1rem;
   right: 15px;
   bottom: 70px;
   z-index: 996;
@@ -142,17 +143,12 @@ h6 {
   transition: all 0.4s;
 }
 
-.franchise-floating-button i {
-  font-size: 24px;
-  color: #f3b318;
-  line-height: 0;
-}
-
 .franchise-floating-button label {
-  font-size: 12px;
+  font-size: 18px;
   color: #f3b318;
   padding-right: 4%;
   cursor: pointer;
+  display: contents;
 }
 
 @media (max-width: 993px) {
@@ -1023,9 +1019,9 @@ section {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
+  /* font-size: 16px; */
+  /* line-height: 24px;fd */
+  /* font-weight: 500; */
   padding-right: 30px;
   outline: none;
   cursor: pointer;

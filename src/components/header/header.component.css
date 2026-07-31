@@ -28,7 +28,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(40, 58, 90, 0.9);
+  background: #000000a6;
   transition: 0.3s;
   z-index: 999;
 }
@@ -194,8 +194,8 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 .mobile-navbar {
-  position: absolute;
-  right: 10%;
+  position: fixed;
+  /* right: 10%; */
 }
 
 .desktop-navbar {

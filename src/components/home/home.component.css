@@ -455,7 +455,7 @@
 .desktop-bg {
     position: absolute;
     inset: 0;
-    background: url("../../assets/img/food-pics/new-desktop-bg.png") no-repeat center center / cover;
+    background: url("../../assets/img/food-pics/new-desktop-bg3.png") no-repeat center center / cover;
     z-index: 1;
 }
 
@@ -466,8 +466,8 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url("../../assets/img/food-pics/new-mobile-bg.png") no-repeat center center / cover;
-    z-index: 1;
+    background: url("../../assets/img/food-pics/new-mobile-bg2.png") no-repeat center center / cover;
+    /* z-index: 1; */
 }
 
 
